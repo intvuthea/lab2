@@ -4,12 +4,12 @@
 	//Empty array of Odd and Even
 	$oddArr = []; //or $oddArr = array(); or $oddArr = (array) null;
 	$countOdd = 0;
-	$evenArrr = (array) null;
+	$evenArr = (array) null;
 	$countEven = 0;
 
 	for ($i = 0 ; $i < sizeof($arrB) ; $i++){
 		if ($arrB[$i] % 2 == 0){
-			$evenArrr[$countEven] = $arrB[$i];
+			$evenArr[$countEven] = $arrB[$i];
 			$countEven++;
 		}else{
 			$oddArr[$countOdd] = $arrB[$i];
@@ -18,7 +18,20 @@
 	}
 
 	echo "Odd number = ";
+	foreach ($evenArr as $value) {
+		echo $value." ";
+	}
+
+	echo "<br>Even number = ";
+	foreach ($oddArr as $value) {
+		echo $value." ";
+	}
+
+	//Or 
+	/* 
+	echo "Odd number = ";
 	print_r($oddArr);
 	echo "<br>Even number = ";
-	print_r($evenArrr);
+	print_r($evenArr);
+	*/
 ?>
