@@ -11,9 +11,16 @@
 			return 0;
 		}
 	}
-	echo microtime()."<br>";
-	echo fibonaci(8)."<br>";
-	echo microtime()."<br>";
+	$time1=microtime()*1000;
+	echo "time before run :".$time1."<br>";
+	echo "recursion :".fibonaci(20)."<br>";
+	$time2=microtime()*1000;
+	echo "time after run :".$time2."<br>";
+	echo "delay :".($time2-$time1)."<br>";
+
+
+
+
 	function fibo($n){
 		$n0=0;
 		$n1=1;
@@ -32,8 +39,13 @@
 			return $n2;
 		}	
 	}
-	echo microtime()."<br>";
-	echo fibo(8)."<br>";
-	echo microtime()."<br>";
-
+	echo "<br>";
+	echo "<br>";
+	$time1=microtime()*1000;
+	echo "time before run :".$time1."<br>";
+	echo "loop :".fibo(20)."<br>";
+	$time2=microtime()*1000;
+	echo "time after run :".$time2."<br>";
+	echo "delay :".($time2-$time1)."<br>";
+	echo "so loop is faster than recursion";
 	?>
